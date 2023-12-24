@@ -8,5 +8,13 @@ namespace Projekat_OMS
     {
         public DateTime VrijemeAkcije { get; set; }
         public string Opis { get; set; }
+
+        public Akcija() { }
+
+        public Akcija(DateTime va, string opis)
+        {
+            VrijemeAkcije = va;
+            Opis = opis;
+        }
     }
 }
