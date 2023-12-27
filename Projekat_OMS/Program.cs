@@ -1,4 +1,5 @@
-﻿using Projekat_OMS.UIHandler;
+﻿using Oracle.ManagedDataAccess.Client;
+using Projekat_OMS.UIHandler;
 using System;
 using System.Collections.Generic;
 using System.Linq;
