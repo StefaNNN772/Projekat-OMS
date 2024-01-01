@@ -23,6 +23,14 @@ namespace Projekat_OMS
             this.NaponskiNivoEE = naponskiNivo;
         }
 
+        public ElektricniElement(string naziv, int tip, string lokacija, string naponskiNivo)
+        {
+            this.NazivEE = naziv;
+            this.TipEE = tip;
+            this.LokacijaEE = lokacija;
+            this.NaponskiNivoEE = naponskiNivo;
+        }
+
         public static string GetFormattedHeader()
         {
             return string.Format("{0, -8} {1, -20} {2, -10} {3, -20} {4, -20}", "IDEE", "NazivEE", "TipEE_ID", "LokacijaEE", "NaponskiNivoEE");

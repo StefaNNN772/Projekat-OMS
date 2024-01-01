@@ -94,8 +94,11 @@
     <Compile Include="Services\AkcijaService.cs" />
     <Compile Include="Services\ElektricniElementService.cs" />
     <Compile Include="Services\KvarService.cs" />
+    <Compile Include="UIHandler\EvidencijaElektricnihElemenataUIHandler.cs" />
     <Compile Include="UIHandler\Implementation\InsertAkcija.cs" />
+    <Compile Include="UIHandler\Implementation\InsertElektricniElement.cs" />
     <Compile Include="UIHandler\Implementation\InsertKvar.cs" />
+    <Compile Include="UIHandler\Implementation\ShowElektricniElementi.cs" />
     <Compile Include="UIHandler\MainUIHandler.cs" />
     <Compile Include="Utils\ParameterUtil.cs" />
   </ItemGroup>

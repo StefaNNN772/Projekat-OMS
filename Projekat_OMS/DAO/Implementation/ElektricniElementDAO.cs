@@ -110,7 +110,34 @@ namespace Projekat_OMS.DAO.Implementation
 
         public string Save(ElektricniElement entity)
         {
-            throw new NotImplementedException();
+            string query = "insert into ElektricniElement (nazivee, tipee, lokacijaee, naponskinivoee) " +
+                            "values (:nazivee, :tipee, :lokacijaee, :naponskinivoee) ";
+
+            using (IDbConnection connection = ConnectionUtil_Pooling.GetConnection())
+            {
+                connection.Open();
+
+                using (IDbCommand command = connection.CreateCommand())
+                {
+                    command.CommandText = query;
+
+                    ParameterUtil.AddParameter(command, "nazivee", DbType.String);
+                    ParameterUtil.AddParameter(command, "tipee", DbType.Int32);
+                    ParameterUtil.AddParameter(command, "lokacijaee", DbType.String);
+                    ParameterUtil.AddParameter(command, "naponskinivoee", DbType.String);
+
+                    command.Prepare();
+
+                    ParameterUtil.SetParameterValue(command, "nazivee", entity.NazivEE);
+                    ParameterUtil.SetParameterValue(command, "tipee", entity.TipEE);
+                    ParameterUtil.SetParameterValue(command, "lokacijaee", entity.LokacijaEE);
+                    ParameterUtil.SetParameterValue(command, "naponskinivoee", entity.NaponskiNivoEE);
+
+
+                    command.ExecuteNonQuery();
+                    return "";
+                }
+            }
         }
 
         public int SaveAll(IEnumerable<ElektricniElement> entities)

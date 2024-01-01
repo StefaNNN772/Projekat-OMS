@@ -21,5 +21,11 @@ namespace Projekat_OMS.Services
         {
             return elektricniElementDAO.FindById(id);
         }
+
+        public string Save(ElektricniElement entity)
+        {
+            return elektricniElementDAO.Save(entity);
+        }
+
     }
 }

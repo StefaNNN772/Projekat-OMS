@@ -12,6 +12,7 @@ namespace Projekat_OMS.UIHandler
     class MainUIHandler
     {
         private static readonly InsertKvar insertKvar = new InsertKvar();
+        private static readonly EvidencijaElektricnihElemenataUIHandler evidencija = new EvidencijaElektricnihElemenataUIHandler();
         public void HandleMainMenu()
         {
             string answer;
@@ -34,6 +35,7 @@ namespace Projekat_OMS.UIHandler
                     case "2":
                         break;
                     case "3":
+                        evidencija.HandleEvidencijaElemenata();
                         break;
                     case "4":
                         break;
