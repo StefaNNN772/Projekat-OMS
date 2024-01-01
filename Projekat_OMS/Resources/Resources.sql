@@ -40,7 +40,7 @@ alter table ElektricniElement add (
 --skripte za kvar
 create table Kvar (
     idk varchar2(32) not null,
-    vrijemekreiranja date default sysdate,
+    vrijemekreiranja varchar2(20),
     statusk varchar2(30) default 'Nepotvrdjen',
     kratakopis varchar(250) not null,
     ele_element integer not null,
@@ -57,7 +57,15 @@ CREATE OR REPLACE TRIGGER kvartrigger
 BEFORE INSERT ON Kvar
 FOR EACH ROW
 BEGIN
-    :NEW.idk := TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS') || '_' || TO_CHAR(kvar_sekvenca.NEXTVAL, 'FM0');
+    :NEW.idk := TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS') || '_' || TO_CHAR(kvar_sekvenca.NEXTVAL, 'FM0000');
+END;
+/
+
+CREATE OR REPLACE TRIGGER datum_kvar_trigger
+BEFORE INSERT ON kvar
+FOR EACH ROW
+BEGIN
+    :NEW.vrijemekreiranja := TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS');
 END;
 /
 
@@ -77,7 +85,7 @@ CREATE SEQUENCE akcija_sekvenca
 create table Akcija (
     ida integer default akcija_sekvenca.NEXTVAL,
     idk varchar2(32) not null,
-    datumakcije date default sysdate,
+    datumakcije varchar2(20),
     opisa varchar2(250) not null
 );
 
@@ -85,3 +93,11 @@ alter table Akcija add(
     constraint ak_pk primary key (ida),
     constraint ak_fk foreign key (idk) references Kvar(idk)
 );
+
+CREATE OR REPLACE TRIGGER datum_akcija_trigger
+BEFORE INSERT ON akcija
+FOR EACH ROW
+BEGIN
+    :NEW.datumakcije := TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS');
+END;
+/

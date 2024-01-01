@@ -24,7 +24,7 @@ namespace Projekat_OMS.DAO
 
 		T FindById(ID id);
 
-		int Save(T entity);
+		string Save(T entity);
 
 		int SaveAll(IEnumerable<T> entities);
 

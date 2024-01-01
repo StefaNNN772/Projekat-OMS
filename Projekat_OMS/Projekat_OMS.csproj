@@ -76,9 +76,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\IAkcijaDAO.cs" />
     <Compile Include="DAO\ICRUDDao.cs" />
     <Compile Include="DAO\IElektricniElementDAO.cs" />
+    <Compile Include="DAO\IKvarDAO.cs" />
+    <Compile Include="DAO\Implementation\AkcijaDAO.cs" />
     <Compile Include="DAO\Implementation\ElektricniElementDAO.cs" />
+    <Compile Include="DAO\Implementation\KvarDAO.cs" />
     <Compile Include="Model\Akcija.cs" />
     <Compile Include="Connection\ConnectionParams.cs" />
     <Compile Include="Connection\ConnectionUtil_Pooling.cs" />
@@ -87,7 +91,11 @@
     <Compile Include="Model\Kvar.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AkcijaService.cs" />
     <Compile Include="Services\ElektricniElementService.cs" />
+    <Compile Include="Services\KvarService.cs" />
+    <Compile Include="UIHandler\Implementation\InsertAkcija.cs" />
+    <Compile Include="UIHandler\Implementation\InsertKvar.cs" />
     <Compile Include="UIHandler\MainUIHandler.cs" />
     <Compile Include="Utils\ParameterUtil.cs" />
   </ItemGroup>
@@ -101,6 +109,7 @@
     </None>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Resources\Resources.sql" />
     <Content Include="Resources\Resources_Inserts.sql" />

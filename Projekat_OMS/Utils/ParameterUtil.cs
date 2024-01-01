@@ -18,12 +18,13 @@ namespace Projekat_OMS.Utils
             command.Parameters.Add(parameter);
         }
 
-        public static void AddParameter(IDbCommand command, string name, DbType type, ParameterDirection direction)
+        public static void AddParameter(IDbCommand command, string name, DbType type, ParameterDirection direction, int size)
         {
             IDbDataParameter parameter = command.CreateParameter();
             parameter.ParameterName = name;
             parameter.DbType = type;
             parameter.Direction = direction;
+            parameter.Size = size;
             command.Parameters.Add(parameter);
         }
 

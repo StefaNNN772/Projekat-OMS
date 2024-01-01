@@ -1,4 +1,5 @@
 ﻿using Projekat_OMS.Connection;
+using Projekat_OMS.Utils;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -74,10 +75,40 @@ namespace Projekat_OMS.DAO.Implementation
 
         public ElektricniElement FindById(int id)
         {
-            throw new NotImplementedException();
+            string query = "select * " +
+                            "from elektricnielement " +
+                            "where idee = :idee";
+
+            ElektricniElement ele_element = null;
+
+            using (IDbConnection connection = ConnectionUtil_Pooling.GetConnection())
+            {
+                connection.Open();
+
+                using (IDbCommand command = connection.CreateCommand())
+                {
+                    command.CommandText = query;
+
+                    ParameterUtil.AddParameter(command, "idee", DbType.Int32);
+
+                    command.Prepare();
+
+                    ParameterUtil.SetParameterValue(command, "idee", id);
+
+                    using (IDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            ele_element = new ElektricniElement(reader.GetInt32(0), reader.GetString(1), reader.GetInt32(2), reader.GetString(3), reader.GetString(4));
+                        }
+                    }
+                }
+            }
+
+            return ele_element;
         }
 
-        public int Save(ElektricniElement entity)
+        public string Save(ElektricniElement entity)
         {
             throw new NotImplementedException();
         }

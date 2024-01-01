@@ -1,4 +1,5 @@
 ﻿using Projekat_OMS.Services;
+using Projekat_OMS.UIHandler.Implementation;
 using System;
 using System.Collections.Generic;
 using System.Data.Common;
@@ -10,7 +11,7 @@ namespace Projekat_OMS.UIHandler
 {
     class MainUIHandler
     {
-        private static readonly ElektricniElementService elektricniElementService = new ElektricniElementService();
+        private static readonly InsertKvar insertKvar = new InsertKvar();
         public void HandleMainMenu()
         {
             string answer;
@@ -28,8 +29,7 @@ namespace Projekat_OMS.UIHandler
                 switch (answer)
                 {
                     case "1":
-                        //testiranje baze - nema veze sa zadatkom projekta
-                        ShowAll();
+                        insertKvar.AddKvar();
                         break;
                     case "2":
                         break;
@@ -41,25 +41,6 @@ namespace Projekat_OMS.UIHandler
                         break;
                 }
             } while (!answer.ToUpper().Equals("X"));
-        }
-
-        //testiranje baze - nema veze sa zadatkom projekta
-        private void ShowAll()
-        {
-            Console.WriteLine(ElektricniElement.GetFormattedHeader());
-
-            try
-            {
-                foreach (ElektricniElement scene in elektricniElementService.FindAll())
-                {
-                    Console.WriteLine(scene);
-                }
-            }
-            catch (DbException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
         }
     }
 }

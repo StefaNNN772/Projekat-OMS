@@ -16,5 +16,10 @@ namespace Projekat_OMS.Services
         {
             return elektricniElementDAO.FindAll().ToList();
         }
+
+        public ElektricniElement FindById(int id)
+        {
+            return elektricniElementDAO.FindById(id);
+        }
     }
 }
