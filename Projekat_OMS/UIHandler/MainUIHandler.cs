@@ -13,6 +13,7 @@ namespace Projekat_OMS.UIHandler
     {
         private static readonly InsertKvar insertKvar = new InsertKvar();
         private static readonly EvidencijaElektricnihElemenataUIHandler evidencija = new EvidencijaElektricnihElemenataUIHandler();
+        private static readonly ListaKvarova listaKvarova = new ListaKvarova();
         public void HandleMainMenu()
         {
             string answer;
@@ -33,11 +34,10 @@ namespace Projekat_OMS.UIHandler
                         insertKvar.AddKvar();
                         break;
                     case "2":
+                        listaKvarova.SecondMenu();
                         break;
                     case "3":
                         evidencija.HandleEvidencijaElemenata();
-                        break;
-                    case "4":
                         break;
                     default:
                         break;

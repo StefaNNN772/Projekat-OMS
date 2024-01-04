@@ -98,7 +98,10 @@
     <Compile Include="UIHandler\Implementation\InsertAkcija.cs" />
     <Compile Include="UIHandler\Implementation\InsertElektricniElement.cs" />
     <Compile Include="UIHandler\Implementation\InsertKvar.cs" />
+    <Compile Include="UIHandler\Implementation\PrikazListeKvarova.cs" />
     <Compile Include="UIHandler\Implementation\ShowElektricniElementi.cs" />
+    <Compile Include="UIHandler\Implementation\UpdateKvara.cs" />
+    <Compile Include="UIHandler\ListaKvarova.cs" />
     <Compile Include="UIHandler\MainUIHandler.cs" />
     <Compile Include="Utils\ParameterUtil.cs" />
   </ItemGroup>

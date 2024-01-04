@@ -26,7 +26,8 @@ create table ElektricniElement (
     idee integer default ele_element_sekvenca.NEXTVAL,
     nazivee varchar2(30) not null,
     tipee integer not null,
-    lokacijaee varchar2(50) not null,
+    x integer not null,
+    y integer not null,
     naponskinivoee varchar(50) default 'Srednji napon'
 );
 
@@ -40,7 +41,7 @@ alter table ElektricniElement add (
 --skripte za kvar
 create table Kvar (
     idk varchar2(32) not null,
-    vrijemekreiranja varchar2(20),
+    vrijemekreiranja varchar2(10) default TO_CHAR(SYSDATE, 'yyyy-MM-dd') not null,
     statusk varchar2(30) default 'Nepotvrdjen',
     kratakopis varchar(250) not null,
     ele_element integer not null,
@@ -65,7 +66,7 @@ CREATE OR REPLACE TRIGGER datum_kvar_trigger
 BEFORE INSERT ON kvar
 FOR EACH ROW
 BEGIN
-    :NEW.vrijemekreiranja := TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS');
+    :NEW.vrijemekreiranja := TO_CHAR(SYSDATE, 'YYYYMMDDH');
 END;
 /
 

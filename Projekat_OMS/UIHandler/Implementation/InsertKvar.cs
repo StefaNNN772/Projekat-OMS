@@ -28,7 +28,19 @@ namespace Projekat_OMS.UIHandler.Implementation
                 Console.WriteLine("Unesite opis kvara: ");
                 string opisKvara = Console.ReadLine();
 
-                Kvar kvar = new Kvar(kratakOpis, elektricniElementService.FindById(idEle), opisKvara);
+                string status;
+                do
+                {
+                    Console.WriteLine("Unesite status kvara: ");
+                    status = Console.ReadLine();
+
+                    if (!status.Equals("Nepotvrdjen") && !status.Equals("U popravci") && !status.Equals("Testiranje") && !status.Equals("Zatvoreno"))
+                    {
+                        Console.WriteLine("Nepravilan unos kvara!");
+                    }
+                } while (!status.Equals("Nepotvrdjen") && !status.Equals("U popravci") && !status.Equals("Testiranje") && !status.Equals("Zatvoreno"));
+
+                Kvar kvar = new Kvar(status, kratakOpis, elektricniElementService.FindById(idEle), opisKvara);
 
                 string uneseno = kvarService.Save(kvar);
 

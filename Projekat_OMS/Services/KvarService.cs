@@ -16,5 +16,20 @@ namespace Projekat_OMS.Services
         {
             return kvarDAO.Save(entity);
         }
+
+        public List<Kvar> SearchByDate(DateTime ulaz, DateTime izlaz)
+        {
+            return kvarDAO.SearchByDate(ulaz, izlaz).ToList();
+        }
+
+        public Kvar FindById(string id)
+        {
+            return kvarDAO.FindById(id);
+        }
+
+        public bool UpdateSave(string idk, string status, string kratakOpis, string opisProblema, int idElektricnogElementa)
+        {
+            return kvarDAO.UpdateSave(idk, status, kratakOpis, opisProblema, idElektricnogElementa);
+        }
     }
 }

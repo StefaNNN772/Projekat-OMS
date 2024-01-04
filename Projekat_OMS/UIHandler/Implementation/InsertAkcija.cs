@@ -14,6 +14,11 @@ namespace Projekat_OMS.UIHandler.Implementation
 
         public void AddAkcija(string idk, int brojAkcija)
         {
+            if (brojAkcija == 0)
+            {
+                return;
+            }
+
             do
             {
                 try

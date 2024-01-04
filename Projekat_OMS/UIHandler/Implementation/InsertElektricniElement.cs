@@ -22,13 +22,25 @@ namespace Projekat_OMS.UIHandler.Implementation
                 Console.WriteLine("Unesite ID tipa elementa: ");
                 int tip = Int32.Parse(Console.ReadLine());
 
-                Console.WriteLine("Unesite lokaciju elementa: ");
-                string lokacija = Console.ReadLine();
+                Console.WriteLine("Unesite X koordinatu elementa: ");
+                int x = Int32.Parse(Console.ReadLine());
 
-                Console.WriteLine("Unesite naponski nivo: ");
-                string naponskinivo=Console.ReadLine();
+                Console.WriteLine("Unesite Y koordinatu elementa: ");
+                int y = Int32.Parse(Console.ReadLine());
 
-                ElektricniElement el = new ElektricniElement(naziv, tip, lokacija, naponskinivo);
+                string naponskinivo;
+                do
+                {
+                    Console.WriteLine("Unesite naponski nivo: ");
+                    naponskinivo = Console.ReadLine();
+
+                    if (!naponskinivo.Equals("Visok napon") && !naponskinivo.Equals("Srednji napon") && !naponskinivo.Equals("Nizak napon"))
+                    {
+                        Console.WriteLine("Nepravilan unos naponskog nivoa: ");
+                    }
+                } while (!naponskinivo.Equals("Visok napon") && !naponskinivo.Equals("Srednji napon") && !naponskinivo.Equals("Nizak napon"));
+
+                ElektricniElement el = new ElektricniElement(naziv, tip, x, y, naponskinivo);
 
                 string uneseno = elektricniElementService.Save(el);
 

@@ -10,7 +10,7 @@ namespace Projekat_OMS.Services
 {
     class ElektricniElementService
     {
-        private static readonly IElektricniElementDAO elektricniElementDAO = new ElektricniElementDAO();
+        private static IElektricniElementDAO elektricniElementDAO = new ElektricniElementDAO();
 
         public List<ElektricniElement> FindAll()
         {
@@ -27,5 +27,9 @@ namespace Projekat_OMS.Services
             return elektricniElementDAO.Save(entity);
         }
 
+        public bool FindByIdBool(int id)
+        {
+            return elektricniElementDAO.FindByIdBool(id);
+        }
     }
 }
