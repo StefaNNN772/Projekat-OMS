@@ -11,22 +11,44 @@ namespace Projekat_OMS.UIHandler.Implementation
     class InsertElektricniElement
     {
         private static readonly ElektricniElementService elektricniElementService = new ElektricniElementService();
+        private static readonly ElektricniTipService elektricniTipService = new ElektricniTipService();
+
+        private static int max_size = 30;
 
         public void Insert()
         {
             try
             {
-                Console.WriteLine("Unesite naziv elementa: ");
-                string naziv = Console.ReadLine();
+                string naziv;
+                do
+                {
+                    Console.WriteLine("Unesite naziv elementa: ");
+                    naziv = Console.ReadLine();
+                } while (naziv.Length > max_size || naziv.Length == 0);
 
-                Console.WriteLine("Unesite ID tipa elementa: ");
-                int tip = Int32.Parse(Console.ReadLine());
+                int tip;
+                do
+                {
+                    Console.WriteLine("Unesite ID tipa elementa: ");
+                    Int32.TryParse(Console.ReadLine(), out tip);
 
-                Console.WriteLine("Unesite X koordinatu elementa: ");
-                int x = Int32.Parse(Console.ReadLine());
+                    if (!elektricniTipService.FindByIdBool(tip))
+                    {
+                        Console.WriteLine("Ne postoji tip elektricnog elementa sa zadatim ID-em! Pokusajte ponovo!");
+                    }
+                } while (!elektricniTipService.FindByIdBool(tip));
 
-                Console.WriteLine("Unesite Y koordinatu elementa: ");
-                int y = Int32.Parse(Console.ReadLine());
+                int x;
+                do
+                {
+                    Console.WriteLine("Unesite X koordinatu elementa: ");
+                } while (Int32.TryParse(Console.ReadLine(), out x) == false);
+
+                int y;
+                do
+                {
+                    Console.WriteLine("Unesite Y koordinatu elementa: ");
+                } while (Int32.TryParse(Console.ReadLine(), out y) == false);
 
                 string naponskinivo;
                 do

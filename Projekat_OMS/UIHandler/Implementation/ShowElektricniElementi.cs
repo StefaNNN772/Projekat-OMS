@@ -14,10 +14,10 @@ namespace Projekat_OMS.UIHandler.Implementation
 
         public void ShowElementi()
         {
-            Console.WriteLine(ElektricniElement.GetFormattedHeader());
             try
             {
-                foreach(ElektricniElement el in elektricniElementService.FindAll())
+                Console.WriteLine(ElektricniElement.GetFormattedHeader());
+                foreach (ElektricniElement el in elektricniElementService.FindAll())
                 {
                     Console.WriteLine(el);
                 }

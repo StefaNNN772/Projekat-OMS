@@ -37,5 +37,15 @@ namespace Projekat_OMS.Services
         {
             return akcijaDAO.CountById(idK);
         }
+
+        public List<Kvar> FindAll()
+        {
+            return kvarDAO.FindAll().ToList();
+        }
+
+        public void Dokument(string idk)
+        {
+            kvarDAO.Dokument(idk);
+        }
     }
 }

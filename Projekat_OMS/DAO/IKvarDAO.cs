@@ -11,5 +11,7 @@ namespace Projekat_OMS.DAO
         List<Kvar> SearchByDate(DateTime ulaz, DateTime izlaz);
 
         bool UpdateSave(string idk, string status, string kratakOpis, string opisProblema, int idElektricnogElementa);
+
+        void Dokument(string idk);
     }
 }

@@ -15,18 +15,36 @@ namespace Projekat_OMS.UIHandler.Implementation
 
         private static readonly InsertAkcija insertAkcija = new InsertAkcija();
 
+        private static int max_size = 250;
+
         public void AddKvar()
         {
             try
             {
-                Console.WriteLine("Unesite kratak opis kvara: ");
-                string kratakOpis = Console.ReadLine();
+                string kratakOpis;
+                do
+                {
+                    Console.WriteLine("Unesite kratak opis kvara: ");
+                    kratakOpis = Console.ReadLine();
+                } while (kratakOpis.Length > max_size || kratakOpis.Length == 0);
 
-                Console.WriteLine("Unesite ID elektricnog elementa: ");
-                int idEle = Int32.Parse(Console.ReadLine());
+                int idEle;
+                do
+                {
+                    Console.WriteLine("Unesite ID elektricnog elementa: ");
+                    Int32.TryParse(Console.ReadLine(), out idEle);
+                    if (!elektricniElementService.FindByIdBool(idEle))
+                    {
+                        Console.WriteLine("Ne postoji elektricni element sa zadatim ID-em! Pokusajte ponovo!");
+                    }
+                } while (!elektricniElementService.FindByIdBool(idEle));
 
-                Console.WriteLine("Unesite opis kvara: ");
-                string opisKvara = Console.ReadLine();
+                string opisKvara;
+                do
+                {
+                    Console.WriteLine("Unesite opis kvara: ");
+                    opisKvara = Console.ReadLine();
+                } while (opisKvara.Length > max_size || opisKvara.Length == 0);
 
                 string status;
                 do
@@ -44,8 +62,11 @@ namespace Projekat_OMS.UIHandler.Implementation
 
                 string uneseno = kvarService.Save(kvar);
 
-                Console.WriteLine("Unesite broj akcija za unos: ");
-                int brojAkcija = Int32.Parse(Console.ReadLine());
+                int brojAkcija;
+                do
+                {
+                    Console.WriteLine("Unesite broj akcija za unos: ");
+                } while (Int32.TryParse(Console.ReadLine(), out brojAkcija) == false);
                 insertAkcija.AddAkcija(uneseno, brojAkcija);
             }
             catch (DbException ex)

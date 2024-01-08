@@ -12,6 +12,8 @@ namespace Projekat_OMS.UIHandler.Implementation
     {
         private static readonly AkcijaService akcijaService = new AkcijaService();
 
+        private static int max_size = 250;
+
         public void AddAkcija(string idk, int brojAkcija)
         {
             if (brojAkcija == 0)
@@ -23,8 +25,12 @@ namespace Projekat_OMS.UIHandler.Implementation
             {
                 try
                 {
-                    Console.WriteLine("Unesite opis akcije: ");
-                    string opisAkcije = Console.ReadLine();
+                    string opisAkcije;
+                    do
+                    {
+                        Console.WriteLine("Unesite opis akcije: ");
+                        opisAkcije = Console.ReadLine();
+                    } while (opisAkcije.Length > max_size || opisAkcije.Length == 0);
 
                     Akcija akcija = new Akcija(idk, opisAkcije);
 

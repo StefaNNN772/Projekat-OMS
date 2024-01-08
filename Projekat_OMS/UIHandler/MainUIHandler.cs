@@ -14,6 +14,7 @@ namespace Projekat_OMS.UIHandler
         private static readonly InsertKvar insertKvar = new InsertKvar();
         private static readonly EvidencijaElektricnihElemenataUIHandler evidencija = new EvidencijaElektricnihElemenataUIHandler();
         private static readonly ListaKvarova listaKvarova = new ListaKvarova();
+        private static readonly KreiranjeDokumentaUIHandler kreiranjeDokumentaUIHandler = new KreiranjeDokumentaUIHandler();
         public void HandleMainMenu()
         {
             string answer;
@@ -24,6 +25,7 @@ namespace Projekat_OMS.UIHandler
                 Console.WriteLine("1 - Unesite kvar");
                 Console.WriteLine("2 - Prikaz liste kvarova");
                 Console.WriteLine("3 - Evidencija elektricnih elemenata");
+                Console.WriteLine("4 - Kreiranje dokumenta");
                 Console.WriteLine("X - Ugasite program");
 
                 answer = Console.ReadLine();
@@ -38,6 +40,9 @@ namespace Projekat_OMS.UIHandler
                         break;
                     case "3":
                         evidencija.HandleEvidencijaElemenata();
+                        break;
+                    case "4":
+                        kreiranjeDokumentaUIHandler.HandleKreiranjeDokumenta();
                         break;
                     default:
                         break;

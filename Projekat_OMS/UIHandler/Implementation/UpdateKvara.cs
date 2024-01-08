@@ -15,6 +15,8 @@ namespace Projekat_OMS.UIHandler.Implementation
         private static readonly KvarService kvarService = new KvarService();
         private static readonly ElektricniElementService elektricniElementService = new ElektricniElementService();
 
+        private static int max_size = 250;
+
         public void Update()
         {
             try
@@ -67,14 +69,18 @@ namespace Projekat_OMS.UIHandler.Implementation
                         return;
                     }
 
-                    Console.WriteLine("Unesite novi ili isti kratak opis kvara: ");
-                    string kratakOpis = Console.ReadLine();
+                    string kratakOpis;
+                    do
+                    {
+                        Console.WriteLine("Unesite novi ili isti kratak opis kvara: ");
+                        kratakOpis = Console.ReadLine();
+                    } while (kratakOpis.Length > max_size || kratakOpis.Length == 0);
 
                     int idEle;
                     do
                     {
                         Console.WriteLine("Unesite ID elektricnog elementa: ");
-                        idEle = Int32.Parse(Console.ReadLine());
+                        Int32.TryParse(Console.ReadLine(), out idEle);
 
                         if (!elektricniElementService.FindByIdBool(idEle))
                         {
@@ -82,8 +88,12 @@ namespace Projekat_OMS.UIHandler.Implementation
                         }
                     } while (!elektricniElementService.FindByIdBool(idEle));
 
-                    Console.WriteLine("Unesite novi ili isti opis kvara: ");
-                    string opisProblema = Console.ReadLine();
+                    string opisProblema;
+                    do
+                    {
+                        Console.WriteLine("Unesite opis kvara: ");
+                        opisProblema = Console.ReadLine();
+                    } while (opisProblema.Length > max_size || opisProblema.Length == 0);
 
                     string status;
                     do

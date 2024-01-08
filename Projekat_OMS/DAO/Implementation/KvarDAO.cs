@@ -1,9 +1,12 @@
-﻿using Projekat_OMS.Connection;
+﻿using OfficeOpenXml;
+using Oracle.ManagedDataAccess.Client;
+using Projekat_OMS.Connection;
 using Projekat_OMS.Services;
 using Projekat_OMS.Utils;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,6 +37,64 @@ namespace Projekat_OMS.DAO.Implementation
             throw new NotImplementedException();
         }
 
+        public void Dokument(string idk)
+        {
+            string query = @"select k.idk as IDKvar, e.nazivee as NazivElektricnogElementa, e.naponskinivoee as NaponskiNivoElektricnogElementa, a.opisa as OpisAkcije " +
+                            "from kvar k inner join elektricnielement e on e.idee = k.ele_element left outer join akcija a on a.idk = k.idk " +
+                            "where k.idk = :idk";
+
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "Kvarovi.xlsx");
+
+            using (IDbConnection connection = ConnectionUtil_Pooling.GetConnection())
+            {
+                connection.Open();
+
+                using (IDbCommand command = connection.CreateCommand())
+                {
+                    command.CommandText = query;
+
+                    ParameterUtil.AddParameter(command, "idk", DbType.String);
+
+                    command.Prepare();
+
+                    ParameterUtil.SetParameterValue(command, "idk", idk);
+
+                    using (OracleDataAdapter adapter = new OracleDataAdapter((OracleCommand)command))
+                    {
+                        DataSet dataSet = new DataSet();
+                        adapter.Fill(dataSet);
+
+                        ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+                        using (var package = new ExcelPackage())
+                        {
+                            var worksheet = package.Workbook.Worksheets.Add("Kvarovi");
+
+                            worksheet.Cells["A1"].Value = "ID Kvara";
+                            worksheet.Cells["B1"].Value = "Naziv EE";
+                            worksheet.Cells["C1"].Value = "Naponski Nivo";
+                            worksheet.Cells["D1"].Value = "Spisak akcija";
+
+                            int row = 2;
+
+                            foreach (DataRow dataRow in dataSet.Tables[0].Rows)
+                            {
+                                worksheet.Cells[row, 1].Value = dataRow["IDKvar"];
+                                worksheet.Cells[row, 2].Value = dataRow["NazivElektricnogElementa"];
+                                worksheet.Cells[row, 3].Value = dataRow["NaponskiNivoElektricnogElementa"];
+                                worksheet.Cells[row, 4].Value = dataRow["OpisAkcije"];
+
+                                row++;
+                            }
+
+                            package.SaveAs(new FileInfo(filePath));
+                        }
+
+                        Console.WriteLine("Excel dokument kreiran!");
+                    }
+                }
+            }
+        }
+
         public bool ExistsById(string id)
         {
             string query = "select * " +
@@ -61,7 +122,34 @@ namespace Projekat_OMS.DAO.Implementation
 
         public IEnumerable<Kvar> FindAll()
         {
-            throw new NotImplementedException();
+            string query = "select * " +
+                            "from kvar";
+
+            List<Kvar> ret = new List<Kvar>();
+
+            using (IDbConnection connection = ConnectionUtil_Pooling.GetConnection())
+            {
+                connection.Open();
+
+                using (IDbCommand command = connection.CreateCommand())
+                {
+                    command.CommandText = query;
+
+                    command.Prepare();
+
+                    using (IDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Kvar kv = new Kvar(reader.GetString(0), DateTime.ParseExact(reader.GetString(1), "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture), reader.GetString(2), reader.GetString(3), elektricniElementDAO.FindById(reader.GetInt32(4), connection), reader.GetString(5));
+
+                            ret.Add(kv);
+                        }
+                    }
+                }
+            }
+
+            return ret;
         }
 
         public IEnumerable<Kvar> FindAllById(IEnumerable<string> ids)
