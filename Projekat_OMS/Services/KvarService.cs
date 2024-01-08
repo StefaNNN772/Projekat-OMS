@@ -11,6 +11,7 @@ namespace Projekat_OMS.Services
     class KvarService
     {
         private static readonly IKvarDAO kvarDAO = new KvarDAO();
+        private static readonly IAkcijaDAO akcijaDAO= new AkcijaDAO();
 
         public string Save(Kvar entity)
         {
@@ -30,6 +31,11 @@ namespace Projekat_OMS.Services
         public bool UpdateSave(string idk, string status, string kratakOpis, string opisProblema, int idElektricnogElementa)
         {
             return kvarDAO.UpdateSave(idk, status, kratakOpis, opisProblema, idElektricnogElementa);
+        }
+
+        public int CountById(string idK)
+        {
+            return akcijaDAO.CountById(idK);
         }
     }
 }

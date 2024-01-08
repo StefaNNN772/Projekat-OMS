@@ -86,5 +86,35 @@ namespace Projekat_OMS.DAO.Implementation
         {
             throw new NotImplementedException();
         }
+
+        public int CountById(string idK)
+        {
+            int broj = 0;
+            string query = "select count(ida) from akcija where idk =: idk";
+
+            using(IDbConnection connection = ConnectionUtil_Pooling.GetConnection())
+            {
+                connection.Open();
+                using(IDbCommand command = connection.CreateCommand())
+                {
+                    command.CommandText = query;
+
+                    ParameterUtil.AddParameter(command, "idk", DbType.String);
+
+                    command.Prepare();
+
+                    ParameterUtil.SetParameterValue(command, "idk", idK);
+                    using (IDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            // Čitanje rezultata upita
+                            broj = reader.GetInt32(0);
+                        }
+                    }
+                }
+            }
+            return broj;
+        }
     }
 }

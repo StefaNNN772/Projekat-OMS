@@ -26,12 +26,27 @@ namespace Projekat_OMS.UIHandler.Implementation
 
                 if (kv == null)
                 {
-                    Console.WriteLine("Kvar sa zadatik ID-em nije pronadjen!");
+                    Console.WriteLine("Kvar sa zadatim ID-em nije pronadjen!");
                     return;
                 }
 
-                Console.WriteLine(Kvar.GetFormattedHeader());
-                Console.WriteLine(kv);
+                if (kv.StatusK.Equals("U popravci"))
+                {
+                    DateTime trenutni = DateTime.Now;
+                    TimeSpan razlika = trenutni - kv.VrijemeKreiranja;
+                    int brdana = razlika.Days;
+                    kv.Prioritet = kv.Prioritet + brdana;
+                    Console.WriteLine(kv.Prioritet);
+                    kv.Prioritet = kv.Prioritet + 0.5 * (kvarService.CountById(kv.IdK));
+
+                    Console.WriteLine(Kvar.GetFormattedHeader() + "\t" + string.Format("{0, -20}", "Prioritet"));
+                    Console.WriteLine(kv + "\t" + string.Format("{0, -20}", kv.Prioritet));
+                }
+                else
+                {
+                    Console.WriteLine(Kvar.GetFormattedHeader());
+                    Console.WriteLine(kv);
+                }
 
                 if (!kv.StatusK.Equals("Zatvoreno"))
                 {

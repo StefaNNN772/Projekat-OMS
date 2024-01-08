@@ -14,6 +14,7 @@ namespace Projekat_OMS
         public string KratakOpis { get; set; }
         public ElektricniElement Ele_Element { get; set; }
         public string OpisProblema { get; set; }
+        public double Prioritet { get; set; }
 
         public Kvar(string iD, DateTime vrijemeKreiranja, string status, string kratakOpis, ElektricniElement element, string opisProblema)
         {
@@ -23,6 +24,7 @@ namespace Projekat_OMS
             this.KratakOpis = kratakOpis;
             this.Ele_Element = element;
             this.OpisProblema = opisProblema;
+            this.Prioritet = 0;
         }
 
         public Kvar(string statusK, string kratakOpis, ElektricniElement element, string opisProblema)
@@ -31,6 +33,7 @@ namespace Projekat_OMS
             this.KratakOpis = kratakOpis;
             this.Ele_Element = element;
             this.OpisProblema = opisProblema;
+            this.Prioritet = 0;
         }
 
         public static string GetFormattedHeader()
