@@ -1,4 +1,5 @@
 ﻿using Projekat_OMS.Services;
+using Projekat_OMS.UIHandler.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Data.Common;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Projekat_OMS.UIHandler.Implementation
 {
-    class InsertElektricniElement
+    class InsertElektricniElement : IInsertElektricniElement
     {
         private static readonly ElektricniElementService elektricniElementService = new ElektricniElementService();
         private static readonly ElektricniTipService elektricniTipService = new ElektricniTipService();

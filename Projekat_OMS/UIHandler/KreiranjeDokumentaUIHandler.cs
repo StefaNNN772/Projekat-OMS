@@ -1,4 +1,5 @@
 ﻿using Projekat_OMS.UIHandler.Implementation;
+using Projekat_OMS.UIHandler.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Projekat_OMS.UIHandler
 {
-    class KreiranjeDokumentaUIHandler
+    class KreiranjeDokumentaUIHandler : IKreiranjeDokumentaUIHandler
     {
         private static readonly KreiranjeDokumenta kreiranjeDokumenta = new KreiranjeDokumenta();
         public void HandleKreiranjeDokumenta()
@@ -25,7 +26,7 @@ namespace Projekat_OMS.UIHandler
                 switch (answer)
                 {
                     case "1":
-                        kreiranjeDokumenta.Kreiraj();
+                        kreiranjeDokumenta.KreirajExcel();
                         break;
                     default:
                         break;

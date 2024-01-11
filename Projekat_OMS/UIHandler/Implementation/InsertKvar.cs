@@ -1,4 +1,5 @@
 ﻿using Projekat_OMS.Services;
+using Projekat_OMS.UIHandler.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Data.Common;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Projekat_OMS.UIHandler.Implementation
 {
-    class InsertKvar
+    class InsertKvar : IInsertKvar
     {
         private static readonly ElektricniElementService elektricniElementService = new ElektricniElementService();
         private static readonly KvarService kvarService = new KvarService();

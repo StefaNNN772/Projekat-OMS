@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projekat_OMS.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Projekat_OMS
 {
-    class Kvar
+    internal class Kvar : AbstractModel
     {
         public string IdK { get; set; }
         public DateTime VrijemeKreiranja { get; set; }

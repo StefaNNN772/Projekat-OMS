@@ -105,6 +105,7 @@
     <Compile Include="DAO\Implementation\ElektricniElementDAO.cs" />
     <Compile Include="DAO\Implementation\ElektricniTipDAO.cs" />
     <Compile Include="DAO\Implementation\KvarDAO.cs" />
+    <Compile Include="Model\AbstractModel.cs" />
     <Compile Include="Model\Akcija.cs" />
     <Compile Include="Connection\ConnectionParams.cs" />
     <Compile Include="Connection\ConnectionUtil_Pooling.cs" />
@@ -125,6 +126,16 @@
     <Compile Include="UIHandler\Implementation\PrikazListeKvarova.cs" />
     <Compile Include="UIHandler\Implementation\ShowElektricniElementi.cs" />
     <Compile Include="UIHandler\Implementation\UpdateKvara.cs" />
+    <Compile Include="UIHandler\Interfaces\IEvidencijaElektricnihElemenataUIHandler.cs" />
+    <Compile Include="UIHandler\Interfaces\IInsertAkcija.cs" />
+    <Compile Include="UIHandler\Interfaces\IInsertElektricniElement.cs" />
+    <Compile Include="UIHandler\Interfaces\IInsertKvar.cs" />
+    <Compile Include="UIHandler\Interfaces\IKreiranjeDokumenta.cs" />
+    <Compile Include="UIHandler\Interfaces\IKreiranjeDokumentaUIHandler.cs" />
+    <Compile Include="UIHandler\Interfaces\IListaKvarova.cs" />
+    <Compile Include="UIHandler\Interfaces\IPrikazListeKvarova.cs" />
+    <Compile Include="UIHandler\Interfaces\IShowElektricniElementi.cs" />
+    <Compile Include="UIHandler\Interfaces\IUpdateKvara.cs" />
     <Compile Include="UIHandler\KreiranjeDokumentaUIHandler.cs" />
     <Compile Include="UIHandler\ListaKvarova.cs" />
     <Compile Include="UIHandler\MainUIHandler.cs" />

@@ -1,4 +1,5 @@
 ﻿using Projekat_OMS.UIHandler.Implementation;
+using Projekat_OMS.UIHandler.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Projekat_OMS.UIHandler
 {
-    class ListaKvarova
+    class ListaKvarova : IListaKvarova
     {
         private static readonly PrikazListeKvarova prikazListeKvarova = new PrikazListeKvarova();
         private static readonly UpdateKvara updateKvara = new UpdateKvara();

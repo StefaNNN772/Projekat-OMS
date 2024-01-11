@@ -1,6 +1,7 @@
 ﻿using Projekat_OMS.DAO;
 using Projekat_OMS.DAO.Implementation;
 using Projekat_OMS.Services;
+using Projekat_OMS.UIHandler.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Data.Common;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Projekat_OMS.UIHandler.Implementation
 {
-    class PrikazListeKvarova
+    class PrikazListeKvarova : IPrikazListeKvarova
     {
         private static readonly KvarService kvarService = new KvarService();
 

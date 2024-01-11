@@ -12,7 +12,7 @@ namespace Projekat_OMS.UIHandler.Implementation
     {
         private static readonly KvarService kvarService = new KvarService();
 
-        public void Kreiraj()
+        public void KreirajExcel()
         {
             try
             {
