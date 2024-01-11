@@ -12,44 +12,97 @@ namespace Projekat_OMS.DAO.Implementation
 {
     class ElektricniTipDAO : IElektricniTipDAO
     {
-        public int Count()
-        {
-            throw new NotImplementedException();
-        }
-
-        public int Delete(ElektricniTip entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public int DeleteAll()
-        {
-            throw new NotImplementedException();
-        }
-
-        public int DeleteById(int id)
-        {
-            throw new NotImplementedException();
-        }
 
         public bool ExistsById(int id)
         {
-            throw new NotImplementedException();
+            string query = "select * " +
+                            "from elektricnitip " +
+                            "where idet = :idet";
+
+            using (IDbConnection connection = ConnectionUtil_Pooling.GetConnection())
+            {
+                connection.Open();
+
+                using (IDbCommand command = connection.CreateCommand())
+                {
+                    command.CommandText = query;
+
+                    ParameterUtil.AddParameter(command, "idet", DbType.Int32);
+
+                    command.Prepare();
+
+                    ParameterUtil.SetParameterValue(command, "idet", id);
+
+                    return command.ExecuteScalar() != null;
+                }
+            }
         }
 
         public IEnumerable<ElektricniTip> FindAll()
         {
-            throw new NotImplementedException();
-        }
+            string query = "select * " +
+                            "from elektricnitip";
 
-        public IEnumerable<ElektricniTip> FindAllById(IEnumerable<int> ids)
-        {
-            throw new NotImplementedException();
+            List<ElektricniTip> ret = new List<ElektricniTip>();
+
+            using (IDbConnection connection = ConnectionUtil_Pooling.GetConnection())
+            {
+                connection.Open();
+
+                using (IDbCommand command = connection.CreateCommand())
+                {
+                    command.CommandText = query;
+
+                    command.Prepare();
+
+                    using (IDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            ElektricniTip et = new ElektricniTip(reader.GetInt32(0), reader.GetString(1));
+
+                            ret.Add(et);
+                        }
+                    }
+                }
+            }
+
+            return ret;
         }
 
         public ElektricniTip FindById(int id)
         {
-            throw new NotImplementedException();
+            string query = "select * " +
+                            "from elektricnitip " +
+                            "where idet = :idet";
+
+            ElektricniTip ret = null;
+
+            using (IDbConnection connection = ConnectionUtil_Pooling.GetConnection())
+            {
+                connection.Open();
+
+                using (IDbCommand command = connection.CreateCommand())
+                {
+                    command.CommandText = query;
+
+                    ParameterUtil.AddParameter(command, "idet", DbType.Int32);
+
+                    command.Prepare();
+
+                    ParameterUtil.SetParameterValue(command, "idet", id);
+
+                    using (IDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            ret = new ElektricniTip(reader.GetInt32(0), reader.GetString(1));
+                        }
+                    }
+                }
+            }
+
+            return ret;
         }
 
         public bool FindByIdBool(int id)
@@ -79,12 +132,29 @@ namespace Projekat_OMS.DAO.Implementation
 
         public string Save(ElektricniTip entity)
         {
-            throw new NotImplementedException();
-        }
+            string query = @"insert into elektricnitip (nazivet) " +
+                            "values (:nazivet) " +
+                            "returning idet into :idet_out";
 
-        public int SaveAll(IEnumerable<ElektricniTip> entities)
-        {
-            throw new NotImplementedException();
+            using (IDbConnection connection = ConnectionUtil_Pooling.GetConnection())
+            {
+                connection.Open();
+
+                using (IDbCommand command = connection.CreateCommand())
+                {
+                    command.CommandText = query;
+
+                    ParameterUtil.AddParameter(command, "nazivet", DbType.String);
+                    ParameterUtil.AddParameter(command, "idet_out", DbType.Int32, ParameterDirection.Output, 20);
+
+                    command.Prepare();
+
+                    ParameterUtil.SetParameterValue(command, "nazivet", entity.NazivET);
+
+                    command.ExecuteNonQuery();
+                    return ParameterUtil.GetParameterValue(command, "idet_out").ToString();
+                }
+            }
         }
     }
 }

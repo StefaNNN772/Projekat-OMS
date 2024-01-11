@@ -17,26 +17,6 @@ namespace Projekat_OMS.DAO.Implementation
     {
         private static readonly IElektricniElementDAO elektricniElementDAO = new ElektricniElementDAO();
 
-        public int Count()
-        {
-            throw new NotImplementedException();
-        }
-
-        public int Delete(Kvar entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public int DeleteAll()
-        {
-            throw new NotImplementedException();
-        }
-
-        public int DeleteById(string id)
-        {
-            throw new NotImplementedException();
-        }
-
         public void Dokument(string idk)
         {
             string query = @"select k.idk as IDKvar, e.nazivee as NazivElektricnogElementa, e.naponskinivoee as NaponskiNivoElektricnogElementa, a.opisa as OpisAkcije " +
@@ -152,11 +132,6 @@ namespace Projekat_OMS.DAO.Implementation
             return ret;
         }
 
-        public IEnumerable<Kvar> FindAllById(IEnumerable<string> ids)
-        {
-            throw new NotImplementedException();
-        }
-
         public Kvar FindById(string id)
         {
             string query = "select * " +
@@ -223,11 +198,6 @@ namespace Projekat_OMS.DAO.Implementation
                     return ParameterUtil.GetParameterValue(command, "idk_out").ToString();
                 }
             }
-        }
-
-        public int SaveAll(IEnumerable<Kvar> entities)
-        {
-            throw new NotImplementedException();
         }
 
         public List<Kvar> SearchByDate(DateTime ulaz, DateTime izlaz)

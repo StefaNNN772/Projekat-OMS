@@ -11,49 +11,128 @@ namespace Projekat_OMS.DAO.Implementation
 {
     class AkcijaDAO : IAkcijaDAO
     {
-        public int Count()
-        {
-            throw new NotImplementedException();
-        }
-
-        public int Delete(Akcija entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public int DeleteAll()
-        {
-            throw new NotImplementedException();
-        }
-
-        public int DeleteById(int id)
-        {
-            throw new NotImplementedException();
-        }
 
         public bool ExistsById(int id)
         {
-            throw new NotImplementedException();
+            string query = "select * " +
+                            "from akcija " +
+                            "where ida = :ida";
+
+            using (IDbConnection connection = ConnectionUtil_Pooling.GetConnection())
+            {
+                connection.Open();
+
+                using (IDbCommand command = connection.CreateCommand())
+                {
+                    command.CommandText = query;
+
+                    ParameterUtil.AddParameter(command, "ida", DbType.Int32);
+
+                    command.Prepare();
+
+                    ParameterUtil.SetParameterValue(command, "ida", id);
+
+                    return command.ExecuteScalar() != null;
+                }
+            }
         }
 
         public IEnumerable<Akcija> FindAll()
         {
-            throw new NotImplementedException();
-        }
+            string query = "select * " +
+                            "from akcija";
 
-        public IEnumerable<Akcija> FindAllById(IEnumerable<int> ids)
-        {
-            throw new NotImplementedException();
+            List<Akcija> ret = new List<Akcija>();
+
+            using (IDbConnection connection = ConnectionUtil_Pooling.GetConnection())
+            {
+                connection.Open();
+
+                using (IDbCommand command = connection.CreateCommand())
+                {
+                    command.CommandText = query;
+
+                    command.Prepare();
+
+                    using (IDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Akcija ak = new Akcija(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3));
+
+                            ret.Add(ak);
+                        }
+                    }
+                }
+            }
+
+            return ret;
         }
 
         public Akcija FindById(int id)
         {
-            throw new NotImplementedException();
+            string query = "select * " +
+                            "from akcija " +
+                            "where ida = :ida";
+
+            Akcija ret = null;
+
+            using (IDbConnection connection = ConnectionUtil_Pooling.GetConnection())
+            {
+                connection.Open();
+
+                using (IDbCommand command = connection.CreateCommand())
+                {
+                    command.CommandText = query;
+
+                    ParameterUtil.AddParameter(command, "ida", DbType.Int32);
+
+                    command.Prepare();
+
+                    ParameterUtil.SetParameterValue(command, "ida", id);
+
+                    using (IDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            ret = new Akcija(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3));
+                        }
+                    }
+                }
+            }
+
+            return ret;
         }
 
         public string Save(Akcija entity)
         {
-            throw new NotImplementedException();
+            string query = @"insert into Akcija (idk, datumakcije, opisa) " +
+                            "values (:idk, :datumakcije, :opisa) " +
+                            "returning ida into :ida_out";
+
+            using (IDbConnection connection = ConnectionUtil_Pooling.GetConnection())
+            {
+                connection.Open();
+
+                using (IDbCommand command = connection.CreateCommand())
+                {
+                    command.CommandText = query;
+
+                    ParameterUtil.AddParameter(command, "idk", DbType.String);
+                    ParameterUtil.AddParameter(command, "datumakcije", DbType.String);
+                    ParameterUtil.AddParameter(command, "opisa", DbType.String);
+                    ParameterUtil.AddParameter(command, "ida_out", DbType.Int32, ParameterDirection.Output, 20);
+
+                    command.Prepare();
+
+                    ParameterUtil.SetParameterValue(command, "idk", entity.IdK);
+                    ParameterUtil.SetParameterValue(command, "datumakcije", entity.DatumAkcije);
+                    ParameterUtil.SetParameterValue(command, "opisa", entity.OpisA);
+
+                    command.ExecuteNonQuery();
+                    return ParameterUtil.GetParameterValue(command, "ida_out").ToString();
+                }
+            }
         }
 
         public bool SaveInsert(Akcija entity)
@@ -80,11 +159,6 @@ namespace Projekat_OMS.DAO.Implementation
                     return command.ExecuteScalar() != null;
                 }
             }
-        }
-
-        public int SaveAll(IEnumerable<Akcija> entities)
-        {
-            throw new NotImplementedException();
         }
 
         public int CountById(string idK)

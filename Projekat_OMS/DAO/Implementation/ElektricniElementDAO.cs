@@ -11,29 +11,30 @@ namespace Projekat_OMS.DAO.Implementation
 {
     class ElektricniElementDAO : IElektricniElementDAO
     {
-        public int Count()
-        {
-            throw new NotImplementedException();
-        }
-
-        public int Delete(ElektricniElement entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public int DeleteAll()
-        {
-            throw new NotImplementedException();
-        }
-
-        public int DeleteById(int id)
-        {
-            throw new NotImplementedException();
-        }
 
         public bool ExistsById(int id)
         {
-            throw new NotImplementedException();
+            string query = "select * " +
+                            "from elektricnielement " +
+                            "where idee = :idee";
+
+            using (IDbConnection connection = ConnectionUtil_Pooling.GetConnection())
+            {
+                connection.Open();
+
+                using (IDbCommand command = connection.CreateCommand())
+                {
+                    command.CommandText = query;
+
+                    ParameterUtil.AddParameter(command, "idee", DbType.Int32);
+
+                    command.Prepare();
+
+                    ParameterUtil.SetParameterValue(command, "idee", id);
+
+                    return command.ExecuteScalar() != null;
+                }
+            }
         }
 
         public IEnumerable<ElektricniElement> FindAll()
@@ -66,11 +67,6 @@ namespace Projekat_OMS.DAO.Implementation
             }
 
             return elektricniElementList;
-        }
-
-        public IEnumerable<ElektricniElement> FindAllById(IEnumerable<int> ids)
-        {
-            throw new NotImplementedException();
         }
 
         public ElektricniElement FindById(int id)
@@ -195,11 +191,6 @@ namespace Projekat_OMS.DAO.Implementation
                     return "";
                 }
             }
-        }
-
-        public int SaveAll(IEnumerable<ElektricniElement> entities)
-        {
-            throw new NotImplementedException();
         }
     }
 }
