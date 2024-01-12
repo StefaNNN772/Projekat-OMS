@@ -1,5 +1,6 @@
 # Projekat-OMS
 Projekat za ERS
+
             OMS – evidencija kvarova u električnoj mreži
 Outage Management System (OMS), podrazumeva rukovanje greškama i planiranim operacijama u
 distributivnoj mreži. OMS je zadužen za nadgledanje operacija/promena u distributivnoj mreži, koje
