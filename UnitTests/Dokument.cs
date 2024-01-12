@@ -21,7 +21,7 @@ namespace UnitTests
             var kvarList = new List<Projekat_OMS.Kvar>
             {
                 // Add sample Kvar instances for testing
-                new Projekat_OMS.Kvar("20240112005051_0001", DateTime.Parse("2024-01-12"), "U popravci", "dwadwwda", new ElektricniElement(200, "Element1", 1000, 100, 100, "Visok napon"), "dwawdaawdwa" )
+                new Projekat_OMS.Kvar("20240112005051_0001", DateTime.Parse("2024-01-12"), "U popravci", "dwadwwda", new Projekat_OMS.ElektricniElement(200, "Element1", 1000, 100, 100, "Visok napon"), "dwawdaawdwa" )
                 // Add more instances as needed
             };
 

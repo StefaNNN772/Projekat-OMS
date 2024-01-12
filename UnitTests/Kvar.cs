@@ -11,7 +11,7 @@ namespace UnitTests
         public void Constructor_WithParameters_PropertiesAreSet()
         {
             // Arrange
-            var element = new ElektricniElement(1, "Element1", 1000, 100, 100, "Visok napon");
+            var element = new Projekat_OMS.ElektricniElement(1, "Element1", 1000, 100, 100, "Visok napon");
 
             // Act
             var kvar = new Projekat_OMS.Kvar("1", DateTime.Now, "U popravci", "Description", element, "Problem");
@@ -28,7 +28,7 @@ namespace UnitTests
         public void Constructor2_WithParameters_PropertiesAreSet()
         {
             // Arrange
-            var element = new ElektricniElement(1, "Element1", 1000, 100, 100, "Visok napon");
+            var element = new Projekat_OMS.ElektricniElement(1, "Element1", 1000, 100, 100, "Visok napon");
 
             // Act
             var kvar = new Projekat_OMS.Kvar("U popravci", "Description", element, "Problem");
@@ -57,7 +57,7 @@ namespace UnitTests
         public void ToString_ShouldReturnExpectedString()
         {
             // Arrange
-            var element = new ElektricniElement(1, "Element1", 1000, 100, 100, "Visok napon");
+            var element = new Projekat_OMS.ElektricniElement(1, "Element1", 1000, 100, 100, "Visok napon");
 
             // Act
             Projekat_OMS.Kvar kvar = new Projekat_OMS.Kvar("1", new DateTime(2024-01-12), "U popravci", "Description", element, "Problem");
