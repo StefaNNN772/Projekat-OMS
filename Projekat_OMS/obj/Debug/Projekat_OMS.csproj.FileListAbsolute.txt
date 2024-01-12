@@ -1,0 +1,144 @@
+C:\Users\sef_s\Desktop\Projekat2\Projekat_OMS\Projekat_OMS\bin\Debug\Projekat_OMS.exe.config
+C:\Users\sef_s\Desktop\Projekat2\Projekat_OMS\Projekat_OMS\bin\Debug\Projekat_OMS.exe
+C:\Users\sef_s\Desktop\Projekat2\Projekat_OMS\Projekat_OMS\bin\Debug\Projekat_OMS.pdb
+C:\Users\sef_s\Desktop\Projekat2\Projekat_OMS\Projekat_OMS\obj\Debug\Projekat_OMS.csproj.AssemblyReference.cache
+C:\Users\sef_s\Desktop\Projekat2\Projekat_OMS\Projekat_OMS\obj\Debug\Projekat_OMS.csproj.CoreCompileInputs.cache
+C:\Users\sef_s\Desktop\Projekat2\Projekat_OMS\Projekat_OMS\obj\Debug\Projekat_OMS.exe
+C:\Users\sef_s\Desktop\Projekat2\Projekat_OMS\Projekat_OMS\obj\Debug\Projekat_OMS.pdb
+C:\Users\sef_s\Desktop\Projekat2\Projekat_OMS\Projekat_OMS\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\sef_s\Desktop\Projekat2\Projekat_OMS\Projekat_OMS\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\sef_s\Desktop\Projekat2\Projekat_OMS\Projekat_OMS\bin\Debug\System.Buffers.dll
+C:\Users\sef_s\Desktop\Projekat2\Projekat_OMS\Projekat_OMS\bin\Debug\System.Memory.dll
+C:\Users\sef_s\Desktop\Projekat2\Projekat_OMS\Projekat_OMS\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\sef_s\Desktop\Projekat2\Projekat_OMS\Projekat_OMS\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\sef_s\Desktop\Projekat2\Projekat_OMS\Projekat_OMS\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\sef_s\Desktop\Projekat2\Projekat_OMS\Projekat_OMS\bin\Debug\System.Text.Json.dll
+C:\Users\sef_s\Desktop\Projekat2\Projekat_OMS\Projekat_OMS\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\sef_s\Desktop\Projekat2\Projekat_OMS\Projekat_OMS\bin\Debug\System.ValueTuple.dll
+C:\Users\sef_s\Desktop\Projekat2\Projekat_OMS\Projekat_OMS\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\sef_s\Desktop\Projekat2\Projekat_OMS\Projekat_OMS\bin\Debug\System.Buffers.xml
+C:\Users\sef_s\Desktop\Projekat2\Projekat_OMS\Projekat_OMS\bin\Debug\System.Memory.xml
+C:\Users\sef_s\Desktop\Projekat2\Projekat_OMS\Projekat_OMS\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\sef_s\Desktop\Projekat2\Projekat_OMS\Projekat_OMS\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\sef_s\Desktop\Projekat2\Projekat_OMS\Projekat_OMS\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\sef_s\Desktop\Projekat2\Projekat_OMS\Projekat_OMS\bin\Debug\System.Text.Json.xml
+C:\Users\sef_s\Desktop\Projekat2\Projekat_OMS\Projekat_OMS\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\sef_s\Desktop\Projekat2\Projekat_OMS\Projekat_OMS\bin\Debug\System.ValueTuple.xml
+C:\Users\sef_s\Desktop\Projekat2\Projekat_OMS\Projekat_OMS\obj\Debug\Projekat_OMS.csproj.CopyComplete
+C:\Users\Strale\Downloads\Projekat-OMS-developer2 (1)\Projekat-OMS-developer2\Projekat_OMS\bin\Debug\Projekat_OMS.exe.config
+C:\Users\Strale\Downloads\Projekat-OMS-developer2 (1)\Projekat-OMS-developer2\Projekat_OMS\bin\Debug\Projekat_OMS.exe
+C:\Users\Strale\Downloads\Projekat-OMS-developer2 (1)\Projekat-OMS-developer2\Projekat_OMS\bin\Debug\Projekat_OMS.pdb
+C:\Users\Strale\Downloads\Projekat-OMS-developer2 (1)\Projekat-OMS-developer2\Projekat_OMS\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Strale\Downloads\Projekat-OMS-developer2 (1)\Projekat-OMS-developer2\Projekat_OMS\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\Strale\Downloads\Projekat-OMS-developer2 (1)\Projekat-OMS-developer2\Projekat_OMS\bin\Debug\System.Buffers.dll
+C:\Users\Strale\Downloads\Projekat-OMS-developer2 (1)\Projekat-OMS-developer2\Projekat_OMS\bin\Debug\System.Memory.dll
+C:\Users\Strale\Downloads\Projekat-OMS-developer2 (1)\Projekat-OMS-developer2\Projekat_OMS\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Strale\Downloads\Projekat-OMS-developer2 (1)\Projekat-OMS-developer2\Projekat_OMS\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Strale\Downloads\Projekat-OMS-developer2 (1)\Projekat-OMS-developer2\Projekat_OMS\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Strale\Downloads\Projekat-OMS-developer2 (1)\Projekat-OMS-developer2\Projekat_OMS\bin\Debug\System.Text.Json.dll
+C:\Users\Strale\Downloads\Projekat-OMS-developer2 (1)\Projekat-OMS-developer2\Projekat_OMS\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Strale\Downloads\Projekat-OMS-developer2 (1)\Projekat-OMS-developer2\Projekat_OMS\bin\Debug\System.ValueTuple.dll
+C:\Users\Strale\Downloads\Projekat-OMS-developer2 (1)\Projekat-OMS-developer2\Projekat_OMS\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Strale\Downloads\Projekat-OMS-developer2 (1)\Projekat-OMS-developer2\Projekat_OMS\bin\Debug\System.Buffers.xml
+C:\Users\Strale\Downloads\Projekat-OMS-developer2 (1)\Projekat-OMS-developer2\Projekat_OMS\bin\Debug\System.Memory.xml
+C:\Users\Strale\Downloads\Projekat-OMS-developer2 (1)\Projekat-OMS-developer2\Projekat_OMS\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Strale\Downloads\Projekat-OMS-developer2 (1)\Projekat-OMS-developer2\Projekat_OMS\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Strale\Downloads\Projekat-OMS-developer2 (1)\Projekat-OMS-developer2\Projekat_OMS\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\Strale\Downloads\Projekat-OMS-developer2 (1)\Projekat-OMS-developer2\Projekat_OMS\bin\Debug\System.Text.Json.xml
+C:\Users\Strale\Downloads\Projekat-OMS-developer2 (1)\Projekat-OMS-developer2\Projekat_OMS\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Strale\Downloads\Projekat-OMS-developer2 (1)\Projekat-OMS-developer2\Projekat_OMS\bin\Debug\System.ValueTuple.xml
+C:\Users\Strale\Downloads\Projekat-OMS-developer2 (1)\Projekat-OMS-developer2\Projekat_OMS\obj\Debug\Projekat_OMS.csproj.AssemblyReference.cache
+C:\Users\Strale\Downloads\Projekat-OMS-developer2 (1)\Projekat-OMS-developer2\Projekat_OMS\obj\Debug\Projekat_OMS.csproj.SuggestedBindingRedirects.cache
+C:\Users\Strale\Downloads\Projekat-OMS-developer2 (1)\Projekat-OMS-developer2\Projekat_OMS\obj\Debug\Projekat_OMS.csproj.CoreCompileInputs.cache
+C:\Users\Strale\Downloads\Projekat-OMS-developer2 (1)\Projekat-OMS-developer2\Projekat_OMS\obj\Debug\Projekat_OMS.csproj.CopyComplete
+C:\Users\Strale\Downloads\Projekat-OMS-developer2 (1)\Projekat-OMS-developer2\Projekat_OMS\obj\Debug\Projekat_OMS.exe
+C:\Users\Strale\Downloads\Projekat-OMS-developer2 (1)\Projekat-OMS-developer2\Projekat_OMS\obj\Debug\Projekat_OMS.pdb
+C:\Users\Strale\Downloads\Projekat-OMS-developer3\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\Projekat_OMS.exe.config
+C:\Users\Strale\Downloads\Projekat-OMS-developer3\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\Projekat_OMS.exe
+C:\Users\Strale\Downloads\Projekat-OMS-developer3\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\Projekat_OMS.pdb
+C:\Users\Strale\Downloads\Projekat-OMS-developer3\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Strale\Downloads\Projekat-OMS-developer3\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\Strale\Downloads\Projekat-OMS-developer3\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\System.Buffers.dll
+C:\Users\Strale\Downloads\Projekat-OMS-developer3\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\System.Memory.dll
+C:\Users\Strale\Downloads\Projekat-OMS-developer3\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Strale\Downloads\Projekat-OMS-developer3\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Strale\Downloads\Projekat-OMS-developer3\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Strale\Downloads\Projekat-OMS-developer3\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\System.Text.Json.dll
+C:\Users\Strale\Downloads\Projekat-OMS-developer3\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Strale\Downloads\Projekat-OMS-developer3\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\System.ValueTuple.dll
+C:\Users\Strale\Downloads\Projekat-OMS-developer3\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Strale\Downloads\Projekat-OMS-developer3\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\System.Buffers.xml
+C:\Users\Strale\Downloads\Projekat-OMS-developer3\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\System.Memory.xml
+C:\Users\Strale\Downloads\Projekat-OMS-developer3\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Strale\Downloads\Projekat-OMS-developer3\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Strale\Downloads\Projekat-OMS-developer3\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\Strale\Downloads\Projekat-OMS-developer3\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\System.Text.Json.xml
+C:\Users\Strale\Downloads\Projekat-OMS-developer3\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Strale\Downloads\Projekat-OMS-developer3\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\System.ValueTuple.xml
+C:\Users\Strale\Downloads\Projekat-OMS-developer3\Projekat-OMS-developer3\Projekat_OMS\obj\Debug\Projekat_OMS.csproj.AssemblyReference.cache
+C:\Users\Strale\Downloads\Projekat-OMS-developer3\Projekat-OMS-developer3\Projekat_OMS\obj\Debug\Projekat_OMS.csproj.SuggestedBindingRedirects.cache
+C:\Users\Strale\Downloads\Projekat-OMS-developer3\Projekat-OMS-developer3\Projekat_OMS\obj\Debug\Projekat_OMS.csproj.CoreCompileInputs.cache
+C:\Users\Strale\Downloads\Projekat-OMS-developer3\Projekat-OMS-developer3\Projekat_OMS\obj\Debug\Projekat_OMS.csproj.CopyComplete
+C:\Users\Strale\Downloads\Projekat-OMS-developer3\Projekat-OMS-developer3\Projekat_OMS\obj\Debug\Projekat_OMS.exe
+C:\Users\Strale\Downloads\Projekat-OMS-developer3\Projekat-OMS-developer3\Projekat_OMS\obj\Debug\Projekat_OMS.pdb
+C:\Users\sef_s\Desktop\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\Projekat_OMS.exe.config
+C:\Users\sef_s\Desktop\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\Projekat_OMS.exe
+C:\Users\sef_s\Desktop\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\Projekat_OMS.pdb
+C:\Users\sef_s\Desktop\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\sef_s\Desktop\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\sef_s\Desktop\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\System.Buffers.dll
+C:\Users\sef_s\Desktop\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\System.Memory.dll
+C:\Users\sef_s\Desktop\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\sef_s\Desktop\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\sef_s\Desktop\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\sef_s\Desktop\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\System.Text.Json.dll
+C:\Users\sef_s\Desktop\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\sef_s\Desktop\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\System.ValueTuple.dll
+C:\Users\sef_s\Desktop\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\sef_s\Desktop\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\System.Buffers.xml
+C:\Users\sef_s\Desktop\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\System.Memory.xml
+C:\Users\sef_s\Desktop\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\sef_s\Desktop\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\sef_s\Desktop\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\sef_s\Desktop\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\System.Text.Json.xml
+C:\Users\sef_s\Desktop\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\sef_s\Desktop\Projekat-OMS-developer3\Projekat_OMS\bin\Debug\System.ValueTuple.xml
+C:\Users\sef_s\Desktop\Projekat-OMS-developer3\Projekat_OMS\obj\Debug\Projekat_OMS.csproj.AssemblyReference.cache
+C:\Users\sef_s\Desktop\Projekat-OMS-developer3\Projekat_OMS\obj\Debug\Projekat_OMS.csproj.CoreCompileInputs.cache
+C:\Users\sef_s\Desktop\Projekat-OMS-developer3\Projekat_OMS\obj\Debug\Projekat_OMS.csproj.CopyComplete
+C:\Users\sef_s\Desktop\Projekat-OMS-developer3\Projekat_OMS\obj\Debug\Projekat_OMS.exe
+C:\Users\sef_s\Desktop\Projekat-OMS-developer3\Projekat_OMS\obj\Debug\Projekat_OMS.pdb
+C:\Users\sef_s\Desktop\Projekat_OMS\Projekat_OMS\bin\Debug\Projekat_OMS.exe.config
+C:\Users\sef_s\Desktop\Projekat_OMS\Projekat_OMS\bin\Debug\Projekat_OMS.exe
+C:\Users\sef_s\Desktop\Projekat_OMS\Projekat_OMS\bin\Debug\Projekat_OMS.pdb
+C:\Users\sef_s\Desktop\Projekat_OMS\Projekat_OMS\bin\Debug\EPPlus.dll
+C:\Users\sef_s\Desktop\Projekat_OMS\Projekat_OMS\bin\Debug\EPPlus.Interfaces.dll
+C:\Users\sef_s\Desktop\Projekat_OMS\Projekat_OMS\bin\Debug\EPPlus.System.Drawing.dll
+C:\Users\sef_s\Desktop\Projekat_OMS\Projekat_OMS\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\sef_s\Desktop\Projekat_OMS\Projekat_OMS\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\sef_s\Desktop\Projekat_OMS\Projekat_OMS\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\sef_s\Desktop\Projekat_OMS\Projekat_OMS\bin\Debug\System.Buffers.dll
+C:\Users\sef_s\Desktop\Projekat_OMS\Projekat_OMS\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\sef_s\Desktop\Projekat_OMS\Projekat_OMS\bin\Debug\System.Memory.dll
+C:\Users\sef_s\Desktop\Projekat_OMS\Projekat_OMS\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\sef_s\Desktop\Projekat_OMS\Projekat_OMS\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\sef_s\Desktop\Projekat_OMS\Projekat_OMS\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\sef_s\Desktop\Projekat_OMS\Projekat_OMS\bin\Debug\System.Text.Json.dll
+C:\Users\sef_s\Desktop\Projekat_OMS\Projekat_OMS\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\sef_s\Desktop\Projekat_OMS\Projekat_OMS\bin\Debug\System.ValueTuple.dll
+C:\Users\sef_s\Desktop\Projekat_OMS\Projekat_OMS\bin\Debug\EPPlus.xml
+C:\Users\sef_s\Desktop\Projekat_OMS\Projekat_OMS\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\sef_s\Desktop\Projekat_OMS\Projekat_OMS\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\sef_s\Desktop\Projekat_OMS\Projekat_OMS\bin\Debug\System.Buffers.xml
+C:\Users\sef_s\Desktop\Projekat_OMS\Projekat_OMS\bin\Debug\System.Memory.xml
+C:\Users\sef_s\Desktop\Projekat_OMS\Projekat_OMS\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\sef_s\Desktop\Projekat_OMS\Projekat_OMS\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\sef_s\Desktop\Projekat_OMS\Projekat_OMS\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\sef_s\Desktop\Projekat_OMS\Projekat_OMS\bin\Debug\System.Text.Json.xml
+C:\Users\sef_s\Desktop\Projekat_OMS\Projekat_OMS\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\sef_s\Desktop\Projekat_OMS\Projekat_OMS\bin\Debug\System.ValueTuple.xml
+C:\Users\sef_s\Desktop\Projekat_OMS\Projekat_OMS\obj\Debug\Projekat_OMS.csproj.AssemblyReference.cache
+C:\Users\sef_s\Desktop\Projekat_OMS\Projekat_OMS\obj\Debug\Projekat_OMS.csproj.CoreCompileInputs.cache
+C:\Users\sef_s\Desktop\Projekat_OMS\Projekat_OMS\obj\Debug\Projekat_OMS.csproj.CopyComplete
+C:\Users\sef_s\Desktop\Projekat_OMS\Projekat_OMS\obj\Debug\Projekat_OMS.exe
+C:\Users\sef_s\Desktop\Projekat_OMS\Projekat_OMS\obj\Debug\Projekat_OMS.pdb
