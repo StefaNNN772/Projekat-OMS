@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Projekat_OMS.UIHandler.Implementation
 {
-    class KreiranjeDokumenta
+    public class KreiranjeDokumenta
     {
         private static readonly KvarService kvarService = new KvarService();
 

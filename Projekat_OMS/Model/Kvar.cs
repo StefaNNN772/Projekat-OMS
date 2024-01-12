@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Projekat_OMS
 {
-    internal class Kvar : AbstractModel
+    public class Kvar : AbstractModel
     {
         public string IdK { get; set; }
         public DateTime VrijemeKreiranja { get; set; }

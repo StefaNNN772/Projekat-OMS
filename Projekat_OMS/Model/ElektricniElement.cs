@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Projekat_OMS
 {
-    internal class ElektricniElement : AbstractModel
+    public class ElektricniElement : AbstractModel
     {
         public int IdEE { get; set; }
         public string NazivEE { get; set; }

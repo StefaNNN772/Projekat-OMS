@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projekat_OMS
 {
-    class Akcija
+    public class Akcija
     {
         public int IdA { get; set; }
         public string IdK { get; set; }

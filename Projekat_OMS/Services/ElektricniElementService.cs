@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Projekat_OMS.Services
 {
-    class ElektricniElementService
+    public class ElektricniElementService
     {
         private static IElektricniElementDAO elektricniElementDAO = new ElektricniElementDAO();
 

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Projekat_OMS.Services
 {
-    class KvarService
+    public class KvarService
     {
         private static readonly IKvarDAO kvarDAO = new KvarDAO();
         private static readonly IAkcijaDAO akcijaDAO= new AkcijaDAO();

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projekat_OMS.Model
 {
-    class ElektricniTip
+    public class ElektricniTip
     {
         public int IdET { get; set; }
         public string NazivET { get; set; }
