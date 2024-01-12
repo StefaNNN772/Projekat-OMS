@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Projekat_OMS;
 using System;
+using System.IO;
 
 namespace UnitTests
 {
@@ -70,5 +71,29 @@ namespace UnitTests
             // Assert
             Assert.AreEqual(expectedString, actualString);
         }
+
+            [TestMethod]
+            public void Prikaz_OutputIsNotEmpty()
+            {
+                // Arrange
+                Projekat_OMS.Services.KvarService kvarService = new Projekat_OMS.Services.KvarService();
+                DateTime today = DateTime.Now;
+                DateTime yesterday = today.AddDays(-1);
+
+                // Create a StringWriter to capture console output
+                using (StringWriter sw = new StringWriter())
+                {
+                    Console.SetOut(sw);
+
+                    // Act
+                    kvarService.SearchByDate(today, yesterday);
+
+                    // Convert the captured console output to a string
+                    string result = sw.ToString();
+
+                    // Assert
+                    NUnit.Framework.Assert.That(result, NUnit.Framework.Is.Empty);
+                }
+            }
     }
 }
